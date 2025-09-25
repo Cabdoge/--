@@ -1,0 +1,50 @@
+\chapter{集合论复习}
+
+\begin{definition}{幂集}
+    设$X$是一个集合，$X$的所有子集组成的集合称为$X$的幂集，记作$2^X$.
+\end{definition}
+
+\begin{definition}{集合的卡氏积}
+    设$X_1,X_2,\cdots,X_n$为集合，则它们的卡氏积定义为$X_1\times X_2\times\cdots\times X_n := \big\{(x_1,x_2,\cdots,x_n)|x_i\in X_i\big\}$.
+\end{definition}
+
+\begin{proposition}{集合运算的分配律}
+    \wideline
+    \begin{enumerate}
+        \item $A\cup \left(\bigcap_{\lambda\in\Lambda}B_\lambda\right)=\bigcap_{\lambda\in\Lambda}{\left(A\cup B_\lambda\right)}$
+        \item $A\cap \left(\bigcup_{\lambda\in\Lambda}B_\lambda\right)=\bigcup_{\lambda\in\Lambda}{\left(A\cap B_\lambda\right)}$
+        \item $A\times \left(\bigcup_{\lambda\in\Lambda}B_\lambda\right)=\bigcup_{\lambda\in\Lambda}{\left(A\times B_\lambda\right)}$
+        \item $A\times \left(\bigcap_{\lambda\in\Lambda}B_\lambda\right)=\bigcap_{\lambda\in\Lambda}{\left(A\times B_\lambda\right)}$
+        \item $A\times \left(B_1\setminus B_2\right)=(A\times B_1)\setminus (A\times B_2)$
+    \end{enumerate}
+\end{proposition}
+
+\begin{theorem}{$\text{德}\cdot\text{摩根定律}$}
+    \wideline
+    \begin{enumerate}
+        \item $A\setminus \left(\bigcup_{\lambda\in\Lambda}{B_{\lambda}}\right)=\bigcap_{\lambda\in\Lambda}{\left(A\setminus B_{\lambda}\right)}$
+        \item $A\setminus \left(\bigcap_{\lambda\in\Lambda}{B_{\lambda}}\right)=\bigcup_{\lambda\in\Lambda}{\left(A\setminus B_{\lambda}\right)}$
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}{映射}
+    设$X,Y$是两个集合，则$X,Y$之间的\textbf{映射}$f:X\to Y$将$X$中的每个元素$x$唯一地对应到$Y$中一个元素$y$.其中$X$称为\textbf{定义域}，$Y$称为\textbf{值域}.
+\end{definition}
+
+\begin{definition}{映射的像}
+    设$f:X\to Y$是一个映射，则子集$A\subseteq X$在$f$之下的像为
+    \[f(A)=\big\{y\in Y\big|\exists\, x\in A,\,\st f(x)=y \big\}\subseteq Y\]
+\end{definition}
+
+\begin{definition}{原像}
+    设$f:X\to Y$是一个映射，则子集$B\subseteq Y$在$f$之下的原像为
+    \[f^{-1}(B)=\big\{x\in X\big|f(x)\in B \big\}\subseteq X\]
+\end{definition}
+
+\begin{note}
+    注意，这里的$f^{-1}$不表示$f$的逆映射或是$f$的反函数.
+\end{note}
+
+\begin{definition}{逆映射}
+    如果$f:X\to Y$是一个双射，定义$f^{-1}:Y\to X$是$f$的逆映射，满足$f:x\mapsto y \Rightarrow f^{-1}:y\mapsto x$.
+\end{definition}
