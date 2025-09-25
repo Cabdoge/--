@@ -49,6 +49,81 @@
     如果$f:X\to Y$是一个双射，定义$f^{-1}:Y\to X$是$f$的逆映射，满足$f:x\mapsto y \Rightarrow f^{-1}:y\mapsto x$.
 \end{definition}
 
-\begin{definition}{}
-    
+\begin{proposition}{映射的性质}
+    \wideline
+    如果$f:X\to Y$，$g:Y\to Z$是两个映射，$A_\lambda\subset X,B_\lambda \subset Y$，则
+    \begin{enumerate}
+        \item $f^{-1}\left(\bigcup_{\lambda}{B_\lambda}\right)=\bigcup_{\lambda}{f^{-1}(B_\lambda)}$
+        \item $f^{-1}\left(\bigcap_{\lambda}{B_\lambda}\right)=\bigcap_{\lambda}{f^{-1}(B_\lambda)}$
+        \item $f\left(\bigcup_{\lambda}{B_\lambda}\right)=\bigcup_{\lambda}{f(B_\lambda)}$
+        \item $f\left(\bigcap_{\lambda}{B_\lambda}\right)\subset\bigcap_{\lambda}{f(B_\lambda)}$，当$f$为单射时，等号成立.
+        \item $f\left(f^{-1}(B)\right)\subset B$，当$f$为满射时，等号成立.
+        \item $f^{-1}\left(f(A)\right)\supset A$，当$f$为单射时，等号成立.
+        \item $(g\circ f)(A)=g \left(f(A)\right),A\subset X$
+        \item $(g\circ f)^{-1}(C)=f^{-1}\left(g^{-1}(C)\right),C\subset Z$
+    \end{enumerate}
+\end{proposition}
+
+
+\begin{definition}{映射的限制}
+    设$f:X\to Y$是一个映射，$A\subset X$，定义$f$在$A$上的限制为
+    \begin{align*}
+        f|_A :A &\to F \\
+        a &\mapsto f(a)
+    \end{align*}
+    反过来，$f$称为$f|_A$在$X$上的扩张.
 \end{definition}
+
+\begin{definition}{特殊的映射}
+    \begin{enumerate}
+        \item ${\setjot[-2]\begin{aligned}
+            \mathrm{id}_X: X &\to X \\
+            x &\mapsto x
+        \end{aligned}}$称为$X$上的恒等映射.
+        \item 若$A\subset X$，则${\setjot[-2]\begin{aligned}
+            i:A &\to X \\
+            a &\mapsto a
+        \end{aligned}}$称为$A$到$X$的包含映射.
+        \item $\setjot[-2]\begin{aligned}
+            \Delta_X:X &\to X\times X \\
+            x &\mapsto (x,x)
+        \end{aligned}$称为$X$的对角映射.
+    \end{enumerate}
+\end{definition}
+
+\begin{remark}
+    关于包含映射，我们有以下交换图： \par
+    \begin{tikzcd}[column sep=3.2em, row sep=2.4em,every label/.append style={font=\large},font=\large]
+A \arrow[rr, "f|_A"] \arrow[rd, "i"'] &                    & Y \\
+                                      & X \arrow[ru, "f"'] &  
+\end{tikzcd}\par
+
+也就是说，我们可以把限制映射看成包含映射和映射的复合.
+
+\begin{definition}{等价关系}
+    设$\sim$是集合$X$上的一个二元关系，如果它满足以下条件：
+    \begin{enumerate}
+        \item 自反性：$\forall\, x\in X,\,x\sim x$
+        \item 对称性: $\forall\, x,y\in X,\,x\sim y\Rightarrow y\sim x$
+        \item 传递性: $\forall\, x,y,z\in X,\,x\sim y\,\text{且}\,y\sim z\Rightarrow x\sim z$
+    \end{enumerate}
+    则称$\sim$为$X$上的一个等价关系.
+\end{definition}
+
+\begin{definition}{等价类}
+    设$\sim$是集合$X$上的一个等价关系，则$A$中所有等价于$x$的元素组成的集合称为$x$的等价类，记作$[x]=\{y\in X|x\sim y\}$.
+\end{definition}
+
+\begin{proposition}{等价类的性质}
+    两个等价类要么是相等的，要么是不交的.
+\end{proposition}
+
+\begin{definition}{商集}
+    设$\sim$是集合$X$上的一个等价关系，所有等价类的集合称为商集，记为$X/\sim \;= \left\{[x]|x\in X\right\}$.
+\end{definition}
+
+
+
+
+
+\end{remark}
