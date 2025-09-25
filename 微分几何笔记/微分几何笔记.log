@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.27)  25 SEP 2025 16:05
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.27)  25 SEP 2025 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1426,7 +1426,7 @@ No file 微分几何笔记.bbl.
 Package biblatex Info: Reference section=0 on input line 134.
 Package biblatex Info: Reference segment=0 on input line 134.
 \c@lstlisting=\count569
-Package hyperref Info: Option `pageanchor' set `false' on input line 140.
+Package hyperref Info: Option `pageanchor' set `false' on input line 139.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -1462,31 +1462,31 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 140.
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 140.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 140.
+(Font)              scaled to size 24.88pt on input line 139.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 139.
 (d:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 140.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 139.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 140.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 139.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+esvect on input line 140.
+LaTeX Font Info:    Trying to load font information for U+esvect on input line 139.
  (d:/texlive/2024/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-LaTeX Font Info:    Trying to load font information for OMX+mdugm on input line 140.
+LaTeX Font Info:    Trying to load font information for OMX+mdugm on input line 139.
  (d:/texlive/2024/texmf-dist/tex/latex/mathdesign/mdugm/omxmdugm.fd
 File: omxmdugm.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdugm.
 )
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 140.
+(Font)              scaled to size 14.4pt on input line 139.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 140.
+(Font)              scaled to size 10.95pt on input line 139.
 
 
 [1
@@ -1495,7 +1495,7 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 146.
+(Font)              scaled to size 17.28pt on input line 145.
  (./微分几何笔记.toc)
 \tf@toc=\write8
 \openout8 = `微分几何笔记.toc'.
@@ -1557,7 +1557,7 @@ Package logreq Info: Writing requests to '微分几何笔记.run.xml'.
 Here is how much of TeX's memory you used:
  47891 strings out of 476187
  1007350 string characters out of 5786073
- 2017277 words of memory out of 5000000
+ 2016277 words of memory out of 5000000
  69625 multiletter control sequences out of 15000+600000
  567880 words of font info for 106 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
