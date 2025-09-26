@@ -878,7 +878,7 @@
   \par}
 
 \newenvironment{solution}{\par\noindent\textbf{\color{main}\solutionname} \citshape}{\par}
-\newenvironment{remark}{\noindent\textbf{\color{third}\remarkname}}{\par}
+\newenvironment{remark}{\noindent\textbf{\color{third}\remarkname}\ \ \;}{\par}
 \newenvironment{notice}{\noindent\textbf{\color{second}提醒}}{\par}
 \newenvironment{assumption}{\par\noindent\textbf{\color{third}\assumptionname} \citshape}{\par}
 \newenvironment{conclusion}{\par\noindent\textbf{\color{third}\conclusionname} \citshape}{\par}
