@@ -1,7 +1,69 @@
 \chapter{拓扑空间}
 
+\section{拓扑空间}
+
 复习一下连续函数的相关知识.
 
 \begin{theorem}{}
     $f:\mathbb{R}\to\mathbb{R}$是连续函数当且仅当任何开集的原像是开集.
 \end{theorem}
+
+
+\begin{proposition}{实数集上开集的性质}
+    \begin{enumerate}
+        \item $\varnothing$和$\mathbb{R}$是开集.
+        \item 任意多个开集的并还是开集.
+        \item 任意有限多个开集的交还是开集.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    第三条性质的证明：设$U_1=\bigcup_\alpha{(a_\alpha,b_\alpha)},U_2=\bigcup_\beta=(c_\beta,d_\beta)$.\par
+    则$U_1\cup U_2=\left(\bigcup_\alpha{(a_\alpha,b_\alpha)}\right)\cup\left(\bigcup_\beta{(c_\beta,d_\beta)}\right) = \bigcup_{\alpha,\beta}\big((a_\alpha,b_\alpha)\cup(c_\beta,d_\beta)\big)$.\par
+    其中$(a_\alpha,b_\alpha)\cup(c_\beta,d_\beta)$一定是空集或是开区间，所以$U_1\cup U_2$也是开集.\par
+    对于有限多个的情形应用数学归纳法即可.\par
+\end{proof}
+
+\begin{definition}{拓扑空间}
+    设$X$是一个集合，$\mathcal{T}$为$X$上的子集族，满足：
+    \begin{enumerate}
+        \item $\varnothing,X\in\mathcal{T}$
+        \item $\mathcal{T}$中任意子集的并仍属于$\mathcal{T}$
+        \item $\mathcal{T}$中有限个子集的交仍属于$\mathcal{T}$
+    \end{enumerate}
+    则称$\mathcal{T}$为$X$上的拓扑，$(X,\mathcal{T})$为一个拓扑空间，$\mathcal{T}$中的子集称为开集.
+\end{definition}
+
+
+\begin{proposition}{条件3的等价条件}
+    $\mathcal{T}$中有限个子集的交仍属于$\mathcal{T} \Leftrightarrow \mathcal{T}$中两个子集的交属于$\mathcal{T}$.
+\end{proposition}
+
+\begin{instance}
+    (1)在标准的实数集$\mathbb{R}$中，$\mathcal{T}:=\left\{\bigcup_\lambda{(a_\lambda,b_\lambda)}\left|(a_\lambda,b_\lambda)\text{是}\mathbb{R}\text{上的开区间}\right.\right\}$是拓扑空间.\par
+    (2)$X={a,b,c}$，$\mathcal{T}_1 = \left\{\varnothing,X,\{a\},\{b\},\{a,b\}\right\}$，$\mathcal{T}_2 = \left\{\varnothing,X,\{a\},\{a,b\}\right\}$，$\mathcal{T}_3 = \left\{\varnothing,X,\{a\},\{a,c\}\right\}$.\par
+    但$\left\{\varnothing,X,\{b\},\{c\},\{a,b\}\right\}$不是拓扑，因为$\{b\}\cup\{c\}=\{b,c\}$不在其中.\par
+    (3)$X$是一个非空集合，$\mathcal{T}_1=\{\varnothing,X\}$，被称为\bluebf{平凡拓扑}.$\mathcal{T}_2=2^X$，被称为\bluebf{离散拓扑}.\par
+    (4)$X=\mathbb{R},\mathcal{T}=\{\varnothing\cup\{\mathbb{R}\text{上有限子集的补集}\}\}$.
+    \begin{enumerate}[leftmargin=4em,label=(i)]
+        \item $\varnothing,\mathbb{R} \in \mathcal{T}$
+        \item $\bigcup_{\lambda}{\left(\mathbb{R}\setminus F_\lambda\right)}=\mathbb{R}\setminus\left(\bigcap_{\lambda}{F_\lambda}\right) \in \mathcal{T}$
+        \item $(\mathbb{R}\setminus F_1) \cap (\mathbb{R}\setminus F_2)=\mathbb{R}\setminus\left(F_1\cup F_2\right) \in \mathcal{T}$
+    \end{enumerate}
+    因此$\mathcal{T}$是$\mathbb{R}$上的拓扑，称为\bluebf{有限补拓扑}，记作$\mathbb{R}_{fc}$.
+\end{instance}
+
+\begin{definition}{拓扑的精细与粗糙}
+    设$\cal{T}_1,\cal{T}_2$是集合$X$上的两个拓扑，如果$\cal{T}_1\subset \cal{T}_2$，则称$\cal{T}_2$比$\cal{T}_1$\textbf{精细}，或称$\cal{T}_1$比$\cal{T}_2$\textbf{粗糙}.
+\end{definition}
+\begin{conclusion}
+    平凡拓扑是最粗糙的拓扑，因为它仅包含了空集和补集，是满足条件1的最低要求.\par
+    离散拓扑是最精细的拓扑，因为它已经包含了集合中的所有子集.\par
+\end{conclusion}
+
+
+
+\begin{instance}
+    在$\mathbb{R}$上，$\mathbb{R}_{trival}\subsetneqq\mathbb{R}_{fc}\subsetneqq\mathbb{R}_{std}\subsetneqq\mathbb{R}_{discrete}$.\par
+    其中$\mathbb{R}_{fc}\subsetneqq\mathbb{R}_{std}$的原因在于任意有限集的补集都是$\mathbb{R}_{std}$中的开集，因此$\mathbb{R}_{fc}\subset \mathbb{R}_{std}$.并且如果我们取$\mathbb{R}_{std}$中的开集$(0,1)$，它的补集是一个无限集，因此不在$\mathbb{R}_{fc}$中，所以$\mathbb{R}_{fc}\subsetneqq \mathbb{R}_{std}$是严格包含的关系.
+\end{instance}
+
