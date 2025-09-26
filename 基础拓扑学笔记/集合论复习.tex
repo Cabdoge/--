@@ -49,6 +49,20 @@
     注意，这里的$f^{-1}$不表示$f$的逆映射或是$f$的反函数.
 \end{notice}
 
+\begin{definition}{单射、满射、双射}
+    设$f:X\to Y$是一个映射，如果：
+    \begin{enumerate}
+        \item $\forall\, x,y\in X,f(x)=f(y)\Rightarrow x=y$，则称$f$是一个\textbf{单射}.
+        \item $\forall\,y\in Y,\exists\, x\in X,\st f(x)=y$，则称$f$是一个\textbf{满射}.
+        \item 若$f$即是单射也是满射，则称$f$是一个\textbf{双射}.
+    \end{enumerate}
+\end{definition}
+
+
+
+
+
+
 \begin{definition}{逆映射}
     如果$f:X\to Y$是一个双射，定义$f^{-1}:Y\to X$是$f$的\textbf{逆映射}，满足$f:x\mapsto y \Rightarrow f^{-1}:y\mapsto x$.
 \end{definition}
@@ -71,9 +85,15 @@
     \begin{enumerate}
         \setcounter{enumi}{3}
         \item $\forall\, x\in \bigcap_{\lambda}{B_\lambda}$，有$\forall \lambda\in\Lambda,x\in B_{\lambda} \Rightarrow \forall \lambda\in\Lambda,f(x)\in f \left(B_\lambda\right) \Rightarrow \forall\lambda\in\Lambda,f\left(\bigcap_{\lambda}{B_\lambda}\right)\subset f(B_\lambda)$\par
-        $ \Rightarrow f\left(\bigcap_{\lambda}{B_\lambda}\right)\subset\bigcap_{\lambda}{f(B_\lambda)}$.
+        $ \Rightarrow f\left(\bigcap_{\lambda}{B_\lambda}\right)\subset\bigcap_{\lambda}{f(B_\lambda)}$.\par
+        当$f$为单射时，对$\forall\, y\in \bigcap_{\lambda}{f(B_\lambda)}$，知$y\in f(B_\lambda)(\forall \lambda)$，所以$\forall \lambda,\exists\, x_\lambda\in B_\lambda,\st f(x_\lambda)=y$.\par
+        由于$f$为单射，可知所有的$x_\lambda$都相等，记为$x_0$，即$\forall \lambda,x_\lambda=x_0 \in X$，则$\forall \lambda,x_0\in B_\lambda\ \Rightarrow x_0\in\bigcap_{\lambda}{B_\lambda} \Rightarrow f(x_0)=y\in f\left(\bigcap_\lambda{B_\lambda}\right) \Rightarrow \bigcap_{\lambda}{f(B_\lambda)}\subset f\left(\bigcap_\lambda{B_\lambda}\right)$.\par
+        综上可知当$f$为单射时，$f\left(\bigcap_{\lambda}{B_\lambda}\right) = \bigcap_{\lambda}{f(B_\lambda)}$
         \item $\forall\, x\in f^{-1}(B)$，$\exists\, y\in B,\st f(x)=y\in B \Rightarrow f\left(f^{-1}(B)\right)\subset B$.\par
         当$f$为满射时，$\forall\, y\in B,\exists\, x\in f^{-1}(B),\st f(x)=y \Rightarrow B \subset f(f^{-1}(B))$，因此$f\left(f^{-1}(B)\right)= B$.
+        \item $\forall\, x\in A,\exists\, y\in f(A),\st f(x)=y$，故$x\in f^{-1}(y) = f^{-1}(f(x)) \subset f(f^{-1}(A)) \Rightarrow A\subset f^{-1}(f(A))$.\par
+        当$f$为单射时，$\forall y\in f(A),\exists!\, x\in A,\st f(x)=y$，故$f^{-1}(y)=x\in A \Rightarrow f^{-1}(f(A))\subset A$.\par
+        因此，当$f$为单射时，$f^{-1}(f(A))=A$.
     \end{enumerate}
 \end{proof}
 
@@ -113,6 +133,8 @@ A \arrow[rr, "f|_A"] \arrow[rd, "i"'] &                    & Y \\
 
 也就是说，我们可以把限制映射看成包含映射和映射的复合.
 
+\end{remark}
+
 \section{等价关系}
 
 \begin{definition}{等价关系}
@@ -138,7 +160,3 @@ A \arrow[rr, "f|_A"] \arrow[rd, "i"'] &                    & Y \\
 \end{definition}
 
 
-
-
-
-\end{remark}
